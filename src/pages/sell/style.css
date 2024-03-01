@@ -1,0 +1,16 @@
+ .form {
+  @apply 
+    py-4 px-7 rounded-md block;
+}
+ .form label {
+  @apply
+     block
+}
+ .form input, form textarea, form select {
+  @apply 
+    border-gray-600 border-2 mt-2 mb-8 px-2 py-1 w-[80%] rounded-md;
+}
+.form button {
+  @apply
+    block mx-auto px-8 py-2 rounded-md bg-green-300;
+}

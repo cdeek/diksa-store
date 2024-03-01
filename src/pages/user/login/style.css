@@ -1,0 +1,40 @@
+/* login form */
+
+.login-form label {
+ pointer-events: none;
+ font-size: 1rem;
+ transform: translateY(5px);
+ transition: all 0.5s ease-in-out;
+}
+
+.login-form input {
+  border: none;
+  border-bottom: 1px solid darkgray;
+  outline: none;
+  background: transparent;
+  width: 100%;
+  padding: 0;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.login-form input:focus~label,
+.login-form input:valid~label {
+   transform: translateY(-5px);
+   color: #1D4ED8;
+   font-size: 12px;
+} 
+
+.login-form .btn {
+  transition: 0.5s;
+  background: #1D4fe0;
+  width: 100%;
+  padding: 5px;
+}
+
+.login-form .btn:hover {
+  box-shadow: 0 0 5px #1D4ED8,
+             0 0 25px #1D4ED8,
+             0 0 50px #1D4ED8,
+             0 0 100px #1D4ED8;
+}

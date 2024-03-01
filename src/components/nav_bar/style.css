@@ -1,0 +1,60 @@
+/* nav bar */
+.header {
+@apply
+  bg-gray-500 m-0 pb-1 pt-2 px-1 w-full fixed text-gray-300 z-10;
+}
+.login {
+  @apply
+    p-1 bg-[#33aaac] rounded-[16px] px-4 text-white
+}
+.search-input {
+  @apply
+  w-[82%] rounded-l-[5px] px-4 py-2 bg-white text-gray-800;
+  sm:w-[200px]
+}
+.search-btn{
+  @apply
+  rounded-r-[5px] bg-white text-blue-500 px-2 py-2;
+}
+
+.cart-number {
+  @apply
+    absolute top-[2px] left-[93%] text-[10px] bg-red-600 text-white rounded-full py-0 px-1
+}
+
+/* sisde nav */
+.side-nav {
+  white-space: nowrap;
+  transition-duration: 0.8s;
+  @apply
+    w-0 fixed h-full top-0 left-0 overflow-y-auto bg-[whitesmoke] bg-opacity-[0.98]
+}
+
+/* spining  */
+.flip:hover {
+  @apply
+    bg-opacity-[0.5] text-gray-400
+}
+.flip span {
+  display: inline-block;
+  font-size: 40px;
+  animation: rot 4s infinite; 
+  animation-delay: calc(.4s * var(--i));
+  @apply
+    text-gray-600
+}
+@keyframes rot {
+  0%,80% {
+    transform: rotateY(360deg) 
+    }
+}
+.side-nav .categories {
+  @apply
+    w-[95%] p-2 rounded-md bg-white m-auto mt-[20px] text-gray-500;
+}
+
+.side-nav li:hover {
+  @apply
+    border-2 border-gray-300 rounded-md bg-gray-200 p-1
+}
+
