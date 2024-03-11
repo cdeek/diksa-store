@@ -1,36 +1,32 @@
-import Ribbon from './ribbon';
-import { Link, useLocation, useNavigate } from "react-router-dom";
-import { Home, Menu, ArrowLeft } from "react-feather";
 import { useEffect, useState } from 'react';
 import Search from './search';
+import Header from './header';
+import { useLocation } from 'react-router-dom';
+import { ArrowLeft } from 'lucide-react';
 import './style.css';
 
-
 export default function NavBar() {
- const location = useLocation();
- const navigate = useNavigate();
- 
+ const pathname = useLocation().pathname
   return (
-   location === "/checkout" ||
-   location === "/privacy" ||
-   location === "/about" || 
-   location === "/FAQ" || 
-   location === "/settings" ||
-   location === "/terms_of_services" || 
-   location === "/contact_us" || 
-   location === "/cart"
+   pathname === "/checkout" ||
+   pathname === "/privacy" ||
+   pathname === "/about" || 
+   pathname === "/FAQ" || 
+   pathname === "/settings" ||
+   pathname === "/terms_of_services" || 
+   pathname === "/contact_us" || 
+   pathname === "/cart"
 
-   ) ? (
-     <header className="flex text-white space-x-4 bg-white py-4 px-2 m-0 w-full">
-       <ArrowLeft onClick={() => navigate(-1)} size={25} />
-       <h1 className="text-xl font-bold">Diksa</h1>
-     </header>) : (
+   ) ? <header className="flex bg-gray-500 text-gray-300 py-4 px-2 m-0 w-full">
+         <ArrowLeft onClick={()=>{history.back()}} />
+         <h1 className="mx-auto text-2xl font-semi-bold">{pathname.slice(1).toUpperCase()}</h1>
+       </header> : (
     <>
     <header className="header">
-      <Ribbon />
+      <Header />
       <Search />
     </header>
-    <div className="h-[106px]"></div>
+    <div className="h-[120px]"></div>
     </>
     )
 }

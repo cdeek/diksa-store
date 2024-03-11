@@ -14,7 +14,7 @@
 }
 .search-btn{
   @apply
-  rounded-r-[5px] bg-white text-blue-500 px-2 py-2;
+  rounded-r-[5px] bg-white text-blue-500 hover:bg-blue-300 px-2 py-2;
 }
 
 .cart-number {

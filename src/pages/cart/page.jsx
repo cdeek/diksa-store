@@ -1,15 +1,15 @@
 import { useEffect, useState } from 'react';
-import { useHook }  from '../../context/use_context';
-import { Link } from 'react-router-dom';
+import context  from '@/context/use_context';
 import Loading from '../loading';
 import { PlusCircle, MinusCircle, Trash2, Heart } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 import './style.css';
 
 
 export default async function Cart() {
-  const { total, cartItems, removeToCart, setCheckoutProducts } = useHook();
+  const { total, cartItems, removeToCart, setCheckoutProducts } = context();
   const [subTotal, setSubTotal] = useState(total);
   const array = [{subTotal}];
   

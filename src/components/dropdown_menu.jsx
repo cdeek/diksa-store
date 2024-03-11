@@ -42,7 +42,7 @@ import {
   DropdownMenuSubContent,
   DropdownMenuSubTrigger
 } from "@/components/ui/dropdown-menu"
-import Logout from '../user/logout';
+ import Logout from '../pages/user/logout';
 
 export default function DropDownMenu() {
   return(
@@ -50,7 +50,7 @@ export default function DropDownMenu() {
       <DropdownMenuTrigger className="hidden sm:inline" asChild>
         <Button className="bg-blue-900 color-white">Menu <ChevronDown className="inline" /></Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-[400px] text-gray-700 text-xlg m-[20px]">
+      <DropdownMenuContent className="w-[400px] bg-white text-gray-700 text-xlg m-[20px]">
          <DropdownMenuLabel>Categories</DropdownMenuLabel>
          <DropdownMenuSeparator />
          <DropdownMenuGroup>

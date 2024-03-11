@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useHook } from '../../context/use_context';
+import context from '@/context/use_context';
 import Logout from '../user/logout';
 
 async function getProduct(id) {
@@ -10,7 +10,7 @@ async function getProduct(id) {
 
 export default function SavedItems() {
  const [datas, setDatas] = useState();
- const { user, addToCart, unsaveItem, message } = useHook();
+ const { user, addToCart, unsaveItem, message } = context();
  
  useEffect(()=> {
    if (user) {

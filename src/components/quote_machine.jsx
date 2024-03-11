@@ -1,4 +1,3 @@
-"use client";
 import { useState, useEffect } from 'react';
 
 export default function QuoteMachine() {
@@ -14,11 +13,12 @@ export default function QuoteMachine() {
       'blue',
       'green',
       'black',
+      'orange',
       'purple',
       'navy',
       'lightblue',
       'brown',
-      'gray'
+      'gray',
      ]
   
   function getQuote() {

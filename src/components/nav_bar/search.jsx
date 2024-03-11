@@ -5,11 +5,11 @@ import { useState, useEffect } from 'react';
 export default function SearchBar() {
   const [searchTerm, setSearchTerm] = useState('');
   const [suggestions, setSuggestions] = useState([]);
-  const navigate = useNavigate();
+  const router = useNavigate();
 
   const handleSearch = () => {
    setSearchTerm('')
-   navigate.push(`/search_result?term=${searchTerm}`);
+   router.push(`/search_result?term=${searchTerm}`);
   }
   
   const handleSuggest = async () => {

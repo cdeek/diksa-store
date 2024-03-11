@@ -1,4 +1,4 @@
-import { toast } from "sonner";
+import { toast } from "use-toast";
 export const saveItem = (token, product_id) => {
  fetch(process.env.NEXT_PUBLIC_API_SAVED_ITEM, {
         method: 'POST',

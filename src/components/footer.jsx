@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   let showYear = new Date().getFullYear();
@@ -8,7 +8,7 @@ export default function Footer() {
           <div>
             <h3 className="text-xl text-gray-400 font-semibold mb-2">Diksa</h3>
             <ul className="list-none grid grid-cols-4">
-              <li><Link to="/Linkbout">About Us</Link></li>
+              <li><Link to="/about">About Us</Link></li>
               <li><Link to="/contact_us">Contact Us</Link></li>
               <li><Link to="/terms_of_services">Terms of Services</Link></li>
               <li><Link to="/FAQ">FAQ</Link></li>
@@ -19,9 +19,9 @@ export default function Footer() {
             <h3 className="text-lg text-gray-400 font-semibold mb-2">Products</h3>
             <ul className="list-none grid grid-cols-4">
               <li><Link to="/privacy">Privacy</Link></li>
-              <li><Link to="/sell">Sell on Diksa</Link></li>
+              <li><Link to="/sell">Become a Seller</Link></li>
               <li><Link to="/report">Report a Product</Link></li>
-              <li><a>Custom Orders</Link></li>
+              <li><Link>Custom Orders</Link></li>
             </ul>
           </div>
           <hr />

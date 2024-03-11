@@ -16,7 +16,7 @@ import {
   Footprints
 } from "lucide-react";
 import { Separator } from '@/components/ui/separator';
-import Logout from '../../user/logout';
+import Logout from '../../pages/user/logout';
 
 
 export default function SideNav({ sideNav, close }) {
@@ -35,9 +35,9 @@ export default function SideNav({ sideNav, close }) {
             <Bookmark className="mr-2 h-6 w-6 inline my-2" />
             <span>Saved Items</span>
           </Link>
-          <Separator />
+           <Separator />
           <h3 className="my-4 text-2xl">Categories</h3>
-          <Separator />
+           <Separator /> 
           <Link onClick={close} className="block" to="/search_result/home+and+office">
             <Home className="mr-2 h-6 w-6 inline my-2" />
             <span>Home & Office</span>

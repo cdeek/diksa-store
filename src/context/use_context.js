@@ -1,13 +1,14 @@
 import { Context } from "./context";
 import { useContext } from "react"
 
-export const useHook = () => {
-  const context = useContext(Context)
+const context = () => {
+  const hook = useContext(Context)
 
-  if(!context) {
+  if(!hook) {
 
     throw Error('context must be used inside an ContextProvider.')
   }
 
-  return context;
+  return hook;
 }
+export default context;
