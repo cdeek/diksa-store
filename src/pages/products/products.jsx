@@ -6,7 +6,7 @@ import LoadingSmall from "@/components/loading";
 import './style.css';
 
 export async function Products() {
-  const { products } = useHook();
+  const { products } = context();
   return (
     <ScrollArea className="p-2 bg-gray-300 w-[90%] rounded-lg mx-auto">
       <div className="flex mx-auto z-[-2]">

@@ -1,5 +1,5 @@
 import '../style.css';
-import { toast } from "@/components/ui/use-toast";
+import { useToast } from "@/components/ui/use-toast";
 import { Button } from "@/components/ui/button";
 import { PlusCircle, MinusCircle } from 'lucide-react';
 import { useState, useRef } from 'react';
@@ -11,6 +11,8 @@ export default function BuyBtn({ product }) {
  const [quantity, setQuantity] = useState(1);
  const con1 = useRef();
  const con2 = useRef();
+ 
+ const { toast } = useToast();
  
  const show = () => {
   con2.current.style.display = "none";
@@ -39,7 +41,9 @@ export default function BuyBtn({ product }) {
        </Button>
        <Button  onClick={() => {
           addToCart(product);
-          toast("Item added to cart.");
+          toast({
+            description: "Item added to cart",
+          });
        }}className="m-1 w-[200px] bg-red-600 text-white p-4">
            Add to cart
        </Button>

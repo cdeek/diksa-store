@@ -3,7 +3,7 @@ import LoadingSmall from "@/components/loading";
 import SlideShow from './slide_show';
 import TopDeals from './top_deals';
 import Categories from './categories';
-//import { Products, ProductsGrid } from './product/page';
+import { Products, ProductsGrid } from '../products/products';
 import QuoteMachine from '@/components/quote_machine';
 
 
@@ -15,12 +15,12 @@ export default function Home() {
       <TopDeals />
       <Categories />
       {/* ads */}
-     {/* <Suspense fallback={<LoadingSmall />}>
+      <Suspense fallback={<LoadingSmall />}>
         <Products />
       </Suspense>
       <Suspense fallback={<LoadingSmall />}>
         <ProductsGrid />
-      </Suspense>*/}
+      </Suspense>
       <QuoteMachine />
     </main>
   )

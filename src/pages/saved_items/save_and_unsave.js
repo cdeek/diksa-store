@@ -1,5 +1,8 @@
-import { toast } from "use-toast";
+import { useToast } from "@/components/ui/use-toast";
+
 export const saveItem = (token, product_id) => {
+  const { toast } = useToast();
+  
  fetch(process.env.NEXT_PUBLIC_API_SAVED_ITEM, {
         method: 'POST',
         headers: {
@@ -7,11 +10,23 @@ export const saveItem = (token, product_id) => {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({product_id})
-      });
-      toast("Item saved");
+      })
+      .then(res => {
+        if (!res.ok) {
+          toast({
+            description: "Item not save",
+          });
+        } else {
+          toast({
+            description: "Item saved",
+          });
+        }
+      })
 }
 
 export const unsaveItem = (token, product_id) => {
+  const { toast } = useToast();
+  
  fetch(`${process.env.NEXT_PUBLIC_API_SAVED_ITEM}/${product_id}`, {
         method: 'DELETE',
         headers: {

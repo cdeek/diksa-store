@@ -2,7 +2,7 @@ import { Routes, Route, Navigate, createBrowserRouter } from "react-router-dom";
 import { Suspense } from 'react';
 import ContextProvider from './context/context';
 import { Loading } from './components/loading';
-import { useToast } from '@/components/ui/use-toast'
+import { Toaster } from "@/components/ui/toaster"
 import Nav from './components/nav_bar/page';
 
 import Home from "./pages/Home/page";
@@ -54,6 +54,7 @@ export const Router = () => {
       <Route path="*" element={<NotFound />} />
     </Routes>
     </Suspense>
+    <Toaster />
     <Footer />
     </ContextProvider>
   );

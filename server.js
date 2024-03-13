@@ -114,8 +114,4 @@ mongoose.connect("mongodb+srv://3mtt:123456a@cluster0.pujkpju.mongodb.net/?retry
 })
 .catch((err) => {
  console.log(err)
-}) 
-
-app.listen(port, () => {
-  console.log(`Server started at http://localhost:${port}`)
- })
+})

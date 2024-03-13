@@ -1,6 +1,6 @@
 import Cookies from 'js-cookie';
 import { createContext, useEffect, useReducer, useState } from 'react';
-//import { saveItem, unsaveItem } from '../pages/saved_items/save_and_unsave';
+import { saveItem, unsaveItem } from '../pages/saved_items/save_and_unsave';
 import productReducer from '../store_reducer/product_reducer';
 import cartReducer, { initialState } from '../store_reducer/cart_reducer';
 
@@ -59,12 +59,13 @@ export default function ContextProvider({children}) {
     user: state.user,
     products, fetching, fetchingError,
     loadMore, changeLimit,
+    saveItem, unsaveItem,
     total, cartItems, addToCart,
     removeToCart, dispatch,
     checkoutProducts,
     setCheckoutProducts
   };
-  //saveItem, unsaveItem,
+
   return(
       <Context.Provider value={values}>
         {children}
